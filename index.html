@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RS ELECTRICIAN — Professional Electrical Services</title>
+  <meta name="description" content="RS ELECTRICIAN - Trusted, fast and affordable home electrician services. Book online for wiring, lighting, appliance repair and more." />
+  <style>
+    :root{
+      --yellow:#f1c40f;
+      --blue:#3498db;
+      --green:#2ecc71;
+      --red:#e74c3c;
+      --black:#111;
+      --muted:#f6f6f6;
+      --maxw:1200px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Arial,Helvetica,sans-serif;color:#111;background:#fff;line-height:1.6}
+    header{background:linear-gradient(90deg,var(--yellow),var(--red));color:#fff;position:sticky;top:0;z-index:50}
+    .container{max-width:var(--maxw);margin:auto;padding:0 16px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{height:50px}
+    nav a{margin-left:14px;color:#fff;text-decoration:none;font-weight:600}
+    nav a:hover{color:#000}
+    .cta{display:flex;gap:10px}
+    .btn{padding:8px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+    .btn.call{background:var(--blue);color:#fff}
+    .btn.wa{background:#25d366;color:#fff}
+    .blink{animation:blink 1s infinite}
+    @keyframes blink{50%{opacity:0.4}}
+
+    /* HERO */
+    .hero{display:grid;gap:20px;align-items:center;padding:40px 0;background:linear-gradient(135deg,var(--yellow),var(--green))}
+    .hero h1{font-size:28px}
+    .hero p{margin:10px 0}
+    .hero-img{height:220px;border-radius:12px;background:url('https://images.unsplash.com/photo-1581093588401-22d625bb3f8e') center/cover no-repeat}
+
+    /* SECTION */
+    .section{padding:40px 0}
+    .section h2{text-align:center;margin-bottom:20px}
+
+    /* SERVICES */
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+    .card{background:#fff;border:1px solid #eee;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.1);padding:16px;text-align:center}
+    .card img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+    .card h3{margin:10px 0}
+    .price{color:var(--red);font-weight:700;margin:6px 0}
+    .book-btn{padding:8px 12px;background:var(--yellow);border:none;border-radius:6px;font-weight:700;cursor:pointer}
+
+    /* GALLERY */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+
+    /* FORMS */
+    form{display:grid;gap:12px;max-width:600px;margin:auto}
+    input,textarea{padding:10px;border:1px solid #ddd;border-radius:6px}
+    .submit-row{text-align:center}
+
+    /* STARS */
+    .stars{display:flex;justify-content:center;gap:6px;font-size:26px;cursor:pointer}
+    .stars input{display:none}
+    .stars label{color:#ccc}
+    .stars input:checked ~ label,
+    .stars label:hover,
+    .stars label:hover ~ label{color:gold}
+
+    /* TESTIMONIALS */
+    .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+    .testimonial{background:#fafafa;padding:14px;border-left:5px solid var(--yellow);border-radius:8px}
+
+    /* FOOTER */
+    footer{background:#111;color:#fff;text-align:center;padding:14px}
+    @media(min-width:768px){.hero{grid-template-columns:1fr 400px}.hero h1{font-size:36px}.hero-img{height:300px}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="https://i.ibb.co/ygWHc9M/rs-electrician-logo.png" alt="Logo">
+      <div>
+        <div style="font-weight:800">RS ELECTRICIAN</div>
+        <small>Safe • Fast • Affordable</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#booking">Book</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="cta">
+      <a class="btn call" href="tel:+916389293604">📞 6389293604</a>
+      <a class="btn wa" href="https://wa.me/916389293604">💬 WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero section">
+  <div>
+    <h1>Trusted Electrical Solutions at Your Doorstep</h1>
+    <p>From wiring & lighting to appliances, inverters, CCTV, and more. Book RS ELECTRICIAN today!</p>
+    <a href="#booking" class="btn call blink">⚡ Book Service</a>
+  </div>
+  <div class="hero-img"></div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Our Services & Prices</h2>
+  <div class="container services" id="servicesGrid"></div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <h2>Gallery</h2>
+  <div class="container gallery" id="galleryGrid"></div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="section" style="background:#fef6e4">
+  <h2>Book a Service</h2>
+  <form action="https://formsubmit.co/rselectrician9283@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Booking — RS ELECTRICIAN">
+    <input type="hidden" name="_captcha" value="false">
+    <label>Name</label><input type="text" name="name" required>
+    <label>Phone</label><input type="tel" name="phone" required>
+    <label>Email</label><input type="email" name="email" placeholder="rselectrician9283@gmail.com">
+    <label>Address</label><input type="text" name="address" required>
+    <label>Service</label><input type="text" name="service" required>
+    <label>Date</label><input type="date" name="date">
+    <label>Time</label><input type="time" name="time">
+    <div class="submit-row">
+      <button type="submit" class="blink" style="background:var(--yellow);border:none;padding:10px 14px;border-radius:8px;font-weight:700">Submit Booking</button>
+    </div>
+  </form>
+</section>
+
+<!-- FEEDBACK -->
+<section id="feedback" class="section">
+  <h2>Customer Feedback</h2>
+  <form action="https://formsubmit.co/rselectrician9283@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Feedback — RS ELECTRICIAN">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email (optional)">
+    <div class="stars">
+      <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+      <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+      <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+      <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+      <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+    </div>
+    <textarea name="feedback" rows="4" placeholder="Write your feedback..." required></textarea>
+    <button type="submit" style="background:var(--green);color:#fff;padding:10px;border:none;border-radius:8px;font-weight:700">Send Feedback</button>
+  </form>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="background:#fafafa">
+  <h2>What Our Customers Say</h2>
+  <div class="container testimonials">
+    <div class="testimonial">⭐⭐⭐⭐⭐ <br> "Quick service, affordable prices." — Ankit</div>
+    <div class="testimonial">⭐⭐⭐⭐ <br> "Polite staff & good work." — Neha</div>
+    <div class="testimonial">⭐⭐⭐⭐⭐ <br> "Emergency fixed in 30 mins!" — Rajesh</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <div class="container" style="text-align:center">
+    <p><b>📞 Phone:</b> <span style="color:var(--blue)">6389293604</span></p>
+    <p><b>📧 Email:</b> rselectrician9283@gmail.com</p>
+    <p><b>💬 WhatsApp:</b> <a href="https://wa.me/916389293604">Chat Now</a></p>
+  </div>
+</section>
+
+<footer>
+  © 2025 RS ELECTRICIAN • All Rights Reserved
+</footer>
+
+<script>
+const SERVICES = [
+  {title:"Home Wiring & Rewiring", price:"₹500/point", img:"https://images.unsplash.com/photo-1581093588401-22d625bb3f8e"},
+  {title:"Lighting Installation", price:"₹150/fitting", img:"https://images.unsplash.com/photo-1597002793402-45a49f6fb5da"},
+  {title:"Appliance Repair", price:"₹300 onwards", img:"https://images.unsplash.com/photo-1603112579440-88943c7f81d1"},
+  {title:"Fan Installation & Repair", price:"₹300/unit", img:"https://images.unsplash.com/photo-1582719478250-25b2f7c1c7b9"},
+  {title:"Switchboard Repair", price:"₹200 onwards", img:"https://images.unsplash.com/photo-1570129477492-45c003edd2be"},
+  {title:"Inverter & Battery", price:"₹1500+", img:"https://images.unsplash.com/photo-1581091012184-3bd03e6b4e2d"},
+  {title:"CCTV Installation", price:"₹1200/camera", img:"https://images.unsplash.com/photo-1515879218367-8466d910aaa4"},
+  {title:"Door Bell & Intercom", price:"₹600/unit", img:"https://images.unsplash.com/photo-1587614301441-0f62d3e8b4c2"},
+  {title:"Water Pump Wiring", price:"₹400/motor", img:"https://images.unsplash.com/photo-1593529467228-9a3d8b6f8f8a"},
+  {title:"Emergency Repair", price:"₹800/night call", img:"https://images.unsplash.com/photo-1581091012184-3bd03"}
+];
+
+const GALLERY = [
+  "https://images.unsplash.com/photo-1581091215367-59ab01c7c9a9",
+  "https://images.unsplash.com/photo-1597002793402-45a49f6fb5da",
+  "https://images.unsplash.com/photo-1570129477492-45c003edd2be",
+  "https://images.unsplash.com/photo-1582719478250-25b2f7c1c7b9"
+];
+
+// Render Services
+let sGrid=document.getElementById("servicesGrid");
+SERVICES.forEach(s=>{
+  let div=document.createElement("div");
+  div.className="card";
+  div.innerHTML=`<img src="${s.img}" alt="${s.title}">
+  <h3>${s.title}</h3>
+  <div class="price">${s.price}</div>
+  <button class="book-btn">Book Service</button>`;
+  div.querySelector(".book-btn").addEventListener("click",e=>{
+    e.target.innerText="Booked ✅";e.target.style.background= "var(--green)";
+  });
+  sGrid.appendChild(div);
+});
+
+// Render Gallery
+let gGrid=document.getElementById("galleryGrid");
+GALLERY.forEach(img=>{
+  let i=document.createElement("img");i.src=img;gGrid.appendChild(i);
+});
+</script>
+
+</body>
+  </html>
